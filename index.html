@@ -3,21 +3,48 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pengaduan PJU</title>
     <style>
-        body {
+        /* Menghilangkan margin dan padding bawaan browser agar iframe penuh */
+        body, html {
             margin: 0;
             padding: 0;
+            height: 100%;
+            width: 100%;
+            overflow: hidden; /* Mencegah munculnya scrollbar di level body */
+            background-color: #000;
         }
+
+        /* Styling container agar iframe mengambil seluruh ruang layar */
+        .iframe-container {
+            position: absolute;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            right: 0;
+            width: 100%;
+            height: 100%;
+        }
+
+        /* Styling iframe untuk responsivitas maksimal */
         iframe {
             width: 100%;
-            height: 100vh;
+            height: 100%;
             border: none;
+            display: block;
         }
     </style>
 </head>
 <body>
 
-    <iframe src="https://script.google.com/a/macros/mhs.unesa.ac.id/s/AKfycbw35WOEV7uHyXv3nOLW2ZdyM0V_C_MwQhVzG2qjtfAcSMj71h4BsGhK4srOQYDEx9FP/exec" allowfullscreen></iframe>
+    <div class="iframe-container">
+        <iframe 
+            src="https://script.google.com/a/macros/mhs.unesa.ac.id/s/AKfycbzg9OwQdvW1XpsLiP_PG9jxnA7tod-RSiJFKkm9PS8-OO07fNobzPStu2kFOLMVKHU7/exec" 
+            id="site-iframe"
+            title="Tessa666 Blog"
+            allowfullscreen>
+        </iframe>
+    </div>
 
 </body>
 </html>
